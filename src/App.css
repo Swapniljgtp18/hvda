@@ -1,0 +1,530 @@
+.App {
+  text-align: center;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+}
+html, body {
+  font-family: "Proxima Nova", sans-serif !important;
+}
+/* Make sure font is loaded first! Then apply globally */
+
+body, h1, h2, h3, h4, h5, p {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================================================================================== Footer section ==================================================================================== */
+.custom-footer {
+
+  background: var(--Colors-Neutral-Black, #131313);
+  /* dark blue */
+  padding: 40px 0;
+  font-size: 15px;
+  color: white;
+}
+
+.custom-footer h5 {
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.custom-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-footer ul li {
+  margin-bottom: 10px;
+}
+
+.custom-footer ul li a {
+  color: grey;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.custom-footer ul li a:hover {
+  color: #ff4a4a;
+  text-decoration: underline;
+}
+
+.footer-column {
+  margin-bottom: 30px;
+}
+
+.copyright-bar {
+  background-color: #d73434;
+  /* red bar */
+  color: white;
+  font-size: 14px;
+  padding: 12px 10px;
+}
+
+/* ==================================================================================== Header section ==================================================================================== */
+.hero-section {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  width: 100%;
+  padding: 00px 0px;
+  padding-top: 80px; 
+  color: white;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  position: relative;
+}
+
+
+
+.image-section img {
+  max-height: 200p;
+  width: auto;
+  border-radius: 8px;
+}
+
+.hero-section {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.text-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-wrapper {
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.text-wrapper h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #7b2cbf;
+}
+
+.text-wrapper p {
+  margin-top: 15px;
+  color: #555;
+}
+
+.learn-more {
+  color: #7b2cbf;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .offset-row {
+    margin-left: 0;
+  }
+
+  .text-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-wrapper h2 {
+    font-size: 1.75rem;
+  }
+}
+
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+.card-grid {
+  gap: 40px;
+}
+
+.card-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+.newsletter-section {
+  background-color: #eaf0ff;
+  max-width: 100%;
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+}
+
+.newsletter-section .highlight {
+  font-weight: 700;
+}
+
+.newsletter-form input[type="email"] {
+  max-width: 300px;
+}
+
+.newsletter-image {
+  max-width: 50%;
+  height: auto;
+}
+
+.newsletter-section {
+  background-color: #eaf0ff;
+  max-width: 100%;
+  min-height: 430px; /* ensures section stays tall */
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+}
+
+.newsletter-form input[type="email"] {
+  max-width: 300px;
+}
+
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-image {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.newsletter-section {
+  background-color: #eaf0ff;
+  width: 100%;
+  min-height: 300px;
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .newsletter-section h2 {
+    text-align: left;
+  }
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+.newsletter-form input[type="email"] {
+  max-width: 50%;
+  min-width: 250px;
+}
+
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-image {
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .newsletter-image {
+    width: 60%;
+  }
+}
+
+.newsletter-section {
+  background-color: #eaf0ff;
+  width: 100%;
+  min-height: 350px; /* reduced from 400px */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.solutions-section {
+  background-color: #ffffff;
+}
+
+.solution-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.solution-image {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Specific sizing overrides if needed */
+.center-card .solution-image {
+  max-width: 300px;
+}
+
+.left-card .solution-image,
+.right-card .solution-image {
+  max-width: 180px;
+}
+
+/* Make spacing consistent */
+.solution-card h5 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.solution-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .solution-image {
+    max-width: 70%;
+  }
+
+  .center-card .solution-image {
+    max-width: 80%;
+  }
+}
+
+
+
+.integrated-suite-section {
+  background-color: #ffffff;
+}
+
+.suite-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  padding: 0rem;
+}
+
+.circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .suite-image {
+    width: 100%;
+  }
+
+  .circle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+.hero-section {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: #fff;
+  overflow-x: hidden;
+  min-height: 150vh; 
+}
+
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.search-bar {
+  max-width: 450px;
+  margin-top: 20px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: none  !important;
+  
+  width: 40% !important;
+  
+
+}
+
+.search-input {
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 30px 0 0 30px;
+  width: 20% !important;
+  
+  background-color: #F2F2F2  !important;
+  border-color:  #F2F2F2 !important;
+
+}
+
+.search-icon {
+  background-color: #000 !important;
+  color: #fff !important;
+  padding: 14px 20px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+}
+
+.hero-image-wrapper {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  max-width: 50%;
+  height: auto;
+  transform: translateY(30px);
+}
+
+
+.navbartoggler{
+  background-color: #000 !important;
+  color: black !important;
+  border-color: #000 !important;
+
+}
+
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    min-height: 100vh; /* Adjusted for smaller screens */
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .search-bar {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 20px;
+    display: flex;
+  }
+
+  .search-input {
+    width: 80% !important; /* take most space */
+    padding: 12px 15px;
+  }
+
+  .search-icon {
+    width: 20%;
+    padding: 12px 0;
+    border-radius: 0 30px 30px 0;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 0px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-image {
+    max-width: 90%;
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .search-icon {
+    font-size: 0.9rem;
+  }
+}
