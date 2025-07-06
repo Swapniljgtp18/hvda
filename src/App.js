@@ -21,6 +21,7 @@ import Electricity from './pages/Electricity';
 import MobileRecharge from './pages/MobileRecharge';
 import UserDetails from './pages/UserDetails';
 import ShowPlans from './pages/ShowPlans';
+import History from './pages/History';
 
 
 
@@ -43,7 +44,7 @@ function App() {
       <Route path="/mobile-recharge" element={<MobileRecharge/>} />
       <Route path='/user-details' element={<UserDetails/> } />
       <Route path="/show-plans" element={<ShowPlans/>} />
-      
+      <Route path="history" element={<History/>} />
       
              
     </Routes>
