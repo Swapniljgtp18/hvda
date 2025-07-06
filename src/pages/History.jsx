@@ -71,6 +71,7 @@ const History = () => {
           <thead>
             <tr>
               <th>#</th>
+              <th>Customer Email</th>
               <th>Wallet Txn ID</th>
               <th>Payin ID</th>
               <th>Amount (₹)</th>
@@ -82,6 +83,7 @@ const History = () => {
             {transactions.map((txn, index) => (
               <tr key={txn.wallet_transaction_id || index}>
                 <td>{index + 1}</td>
+                <td>{txn.customer_email || '--'}</td>
                 <td>{txn.wallet_transaction_id || '--'}</td>
                 <td>{txn.payin_id || '--'}</td>
                 <td>{txn.recharge_amount?.toFixed(2) || '0.00'}</td>
