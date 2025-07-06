@@ -16,7 +16,7 @@ export const getRechargePayments = async (email, token) => {
       }
     );
 
-    return response.data?.data || [];
+    return response.data?.data?.txns || [];
   } catch (err) {
     console.error("❌ Failed to fetch recharge payments:", err?.response?.data || err.message);
     throw err;

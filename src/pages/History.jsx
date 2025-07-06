@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Table, Spinner, Alert } from 'react-bootstrap';
-import { getRechargePayments } from '../api/rechargenew'; // Make sure this matches your path
+import { getRechargePayments } from '../api/history'; // ✅ Ensure this file returns response.data.data
 
 const formatDate = (timestamp) => {
   const date = new Date(timestamp);
@@ -24,7 +24,14 @@ const History = () => {
     try {
       setLoading(true);
       const payments = await getRechargePayments(email, token);
-      setTransactions(payments || []);
+
+      if (!Array.isArray(payments)) {
+        console.warn('⚠️ Unexpected API format:', payments);
+        setTransactions([]);
+      } else {
+        console.log("📄 Recharge Transactions:", payments);
+        setTransactions(payments);
+      }
     } catch (err) {
       console.error('❌ Failed to fetch payment history:', err);
       setError('Unable to fetch payment history.');
@@ -41,9 +48,17 @@ const History = () => {
     <Container className="py-4">
       <h4 className="mb-4 text-center">Transaction History</h4>
 
-      {loading && <Spinner animation="border" className="d-block mx-auto" />}
+      {loading && (
+        <div className="text-center my-4">
+          <Spinner animation="border" />
+        </div>
+      )}
 
-      {error && <Alert variant="danger" className="text-center">{error}</Alert>}
+      {error && (
+        <Alert variant="danger" className="text-center">
+          {error}
+        </Alert>
+      )}
 
       {!loading && !error && transactions.length === 0 && (
         <Alert variant="info" className="text-center">
