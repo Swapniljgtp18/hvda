@@ -45,7 +45,7 @@ const History = () => {
   }, []);
 
   return (
-    <Container className="py-4">
+    <Container className="py-4" style={{height: '100vh'}}>
       <h4 className="mb-4 text-center">Transaction History</h4>
 
       {loading && (
